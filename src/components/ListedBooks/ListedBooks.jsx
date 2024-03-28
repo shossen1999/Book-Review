@@ -83,9 +83,11 @@ const ListedBooks = () => {
           <div className="mt-4">
             <TabPanel>
               <p>{readBooks.length}</p>
-              {
-                readBooks.map(readbook => <Readbooks key={readbook.bookId} readbook={readbook}></Readbooks>)
-              }
+              <div className="flex flex-col gap-6 ">
+                {
+                  readBooks.map(readbook => <Readbooks key={readbook.bookId} readbook={readbook}></Readbooks>)
+                }
+              </div>
             </TabPanel>
             <TabPanel>
               <p>{wishlists.length}</p>
