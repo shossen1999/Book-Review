@@ -16,7 +16,7 @@ const PagesRead = () => {
 
 
     // console.log(storedJsonWishlistBook);
-    fetch('../books.json')
+    fetch('/books.json')
       .then(res => res.json())
       .then(data => setBooks(data));
 

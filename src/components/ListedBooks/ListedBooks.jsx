@@ -22,7 +22,7 @@ const ListedBooks = () => {
     const storedWishlistBooks = JSON.parse(storedJsonWishlistBook)
     // console.log('this is wishlist', storedWishlistBooks);
     // console.log(storedJsonWishlistBook);
-    fetch('../books.json')
+    fetch('/books.json')
       .then(res => res.json())
       .then(data => setBooks(data));
     // const read= books.filter()
