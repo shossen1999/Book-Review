@@ -58,14 +58,14 @@ const ListedBooks = () => {
   // console.log(category);
   return (
     <div>
-      <h2>Listed Books are here</h2>
+     
 
       <div className="text-center bg-[#131313] bg-opacity-5 border-green-300 rounded-[16px] ">
-        <p className="font-bold p-5 text-[28px] text-[#131313]">Books</p>
+        <p className="font-bold p-5 text-[28px] text-[#131313] font-workSans">Books</p>
       </div>
 
       <div className="text-center">
-        <button className="btn btn-success text-white px-8 mt-6">Sort By</button>
+        <button className="btn btn-success text-white px-8 mt-6 font-workSans">Sort By</button>
       </div>
 
       <div>

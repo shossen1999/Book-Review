@@ -11,12 +11,12 @@ const Readbooks = ({ readbook }) => {
 
     return (
 
-        <div className="card flex flex-col lg:flex-row card-side lg:m-0 m-4 bg-base-100 shadow-xl p-8 border-[#282828] border-opacity-[20%] rounded-[16px] border-2">
+        <div className="card font-workSans flex flex-col lg:flex-row card-side lg:m-0 m-4 bg-base-100 shadow-xl p-8 border-[#282828] border-opacity-[20%] rounded-[16px] border-2">
             <div className="lg:w-[20%] bg-[#F3F3F3] rounded-[16px]">
                 <img src={image} className="h-full flex  justify-center items-center  mx-auto p-4" alt="" />
             </div>
             <div className="card-body flex flex-col space-y-2">
-                <h1 className=" font-bold text-[24px] ">{bookName}</h1>
+                <h1 className=" font-bold text-[24px] font-playfair ">{bookName}</h1>
                 <p className=" text-[16px] text-[#131313CC] text-opacity-5 mb-2 font-medium">By: {author}</p>
 
 

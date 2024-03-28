@@ -51,12 +51,12 @@ const BookDetails = () => {
 
     return (
 
-        <div className="flex flex-col lg:flex-row h-[500px] gap-8 mt-10 px-20">
+        <div className="flex flex-col lg:flex-row font-workSans h-[500px] gap-8 mt-10 px-20">
             <div className="lg:w-[50%] bg-[#F3F3F3] rounded-[16px]">
                 <img src={book.image} className="h-full flex  justify-center items-center  mx-auto p-4" alt="" />
             </div>
             <div className="lg:w-[50%] text-start">
-                <h1 className=" font-bold text-[40px] ">{book.bookName}</h1>
+                <h1 className=" font-bold text-[40px] font-playfair">{book.bookName}</h1>
                 <p className=" text-[20px] text-[#131313CC] mb-2">By: {book.author}</p>
                 <hr />
                 <p className=" text-[20px]  text-[#131313CC] my-3">{book.category}</p>
@@ -69,7 +69,7 @@ const BookDetails = () => {
                     ))}
                 </div>
                 <hr className="my-6" />
-                <div>
+                <div className="font-workSans">
                     {bookDetails.map((detail, index) => (
                         <div className="flex" key={index}>
                             <p className="w-[30%]">{detail.label}</p>
@@ -81,7 +81,7 @@ const BookDetails = () => {
                 <div className="flex gap-8 mt-5">
                     <button
                         onClick={handleRead}
-                        className="text-black font-semibold px-4 py-2 rounded-xl border">Read</button>
+                        className="text-black hover:bg-green-400 font-semibold px-4 py-2 rounded-xl border">Read</button>
                     <button
                         onClick={handleWishlist}
                         className="px-4 py-2 rounded-xl text-white bg-[#50B1C9]">Wishlist</button>
