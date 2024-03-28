@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import 'react-tabs/style/react-tabs.css';
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Readbooks from "../Readbooks/Readbooks";
+import Wishlistbooks from "../Wishlistbooks/Wishlistbooks";
 
 
 const ListedBooks = () => {
@@ -82,7 +83,7 @@ const ListedBooks = () => {
           </div>
           <div className="mt-4">
             <TabPanel>
-              <p>{readBooks.length}</p>
+              {/* <p>{readBooks.length}</p> */}
               <div className="flex flex-col gap-6 ">
                 {
                   readBooks.map(readbook => <Readbooks key={readbook.bookId} readbook={readbook}></Readbooks>)
@@ -90,7 +91,10 @@ const ListedBooks = () => {
               </div>
             </TabPanel>
             <TabPanel>
-              <p>{wishlists.length}</p>
+              {/* <p>{wishlists.length}</p> */}
+              {
+                wishlists.map(wishlist => <Wishlistbooks key={wishlist.bookId} wishlist={wishlist}></Wishlistbooks>)
+              }
             </TabPanel>
 
           </div>
