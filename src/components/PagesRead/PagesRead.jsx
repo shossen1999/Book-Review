@@ -56,8 +56,8 @@ const PagesRead = () => {
     <div className="mt-10 overflow-x-auto">
       <div className="inline-block min-w-full">
         <BarChart
-          width={window.innerWidth <= 768 ? window.innerWidth * 0.9 : 1200} // Adjust width for mobile
-          height={300} // Fixed height for mobile
+          width={window.innerWidth <= 768 ? window.innerWidth * 0.9 : 1200} 
+          height={300} 
           data={readBooks}
           margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
