@@ -64,13 +64,13 @@ const BookDetails = () => {
                 <p className="text-[16px]  text-[#131313CC]  my-4"><span className="text-black font-bold">Review: </span>{book.review}</p>
                 <div className="flex gap-8">
                     <p className="text-black font-bold">Tag</p>
-                    {book.tags.map((tag, index) => (
+                    {book?.tags?.map((tag, index) => (
                         <button key={index} className="px-4 py-1 rounded-[24px] bg-[#17BE0A12]  text-[#23BE0A]">#{tag}</button>
                     ))}
                 </div>
                 <hr className="my-6" />
                 <div className="font-workSans">
-                    {bookDetails.map((detail, index) => (
+                    {bookDetails?.map((detail, index) => (
                         <div className="flex" key={index}>
                             <p className="w-[30%]">{detail.label}</p>
                             <p className="font-bold text-[#131313CC]">{detail.value}</p>

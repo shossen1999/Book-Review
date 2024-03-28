@@ -66,7 +66,7 @@ const PagesRead = () => {
           <YAxis />
           <Tooltip />
           <Bar dataKey="totalPages" shape={<TriangleBar />} >
-            {readBooks.map((entry, index) => (
+            {readBooks?.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
             ))}
           </Bar>

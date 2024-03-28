@@ -22,7 +22,7 @@ const Wishlistbooks = ({ wishlist }) => {
                     <div className=" lg:w-[80px]"><p className="text-black font-bold">Tag</p></div>
                     <div className="flex lg:gap-3 gap-1 ">
                         {
-                            tags.map((tag, index) => (
+                            tags?.map((tag, index) => (
 
                                 <p className="lg:px-4 px-6 py-1 rounded-[24px] bg-[#17BE0A12]  text-[#23BE0A]" key={index}> #{tag}</p>
                             ))

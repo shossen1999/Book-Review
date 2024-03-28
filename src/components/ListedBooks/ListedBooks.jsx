@@ -86,14 +86,14 @@ const ListedBooks = () => {
               {/* <p>{readBooks.length}</p> */}
               <div className="flex flex-col gap-6 ">
                 {
-                  readBooks.map(readbook => <Readbooks key={readbook.bookId} readbook={readbook}></Readbooks>)
+                  readBooks?.map(readbook => <Readbooks key={readbook.bookId} readbook={readbook}></Readbooks>)
                 }
               </div>
             </TabPanel>
             <TabPanel>
               {/* <p>{wishlists.length}</p> */}
               {
-                wishlists.map(wishlist => <Wishlistbooks key={wishlist.bookId} wishlist={wishlist}></Wishlistbooks>)
+                wishlists?.map(wishlist => <Wishlistbooks key={wishlist.bookId} wishlist={wishlist}></Wishlistbooks>)
               }
             </TabPanel>
 
