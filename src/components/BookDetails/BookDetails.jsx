@@ -19,7 +19,7 @@ const BookDetails = () => {
         } else {
             saveRead(id);
             if (storedWishlistBooks.includes(id)) {
-                // Remove the book from the wishlist if it's there
+                
                 removeFromWishlist(id);
             }
             toast.success('You have marked this book as read.');
