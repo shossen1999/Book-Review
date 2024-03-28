@@ -15,12 +15,12 @@ const ListedBooks = () => {
   useEffect(() => {
     const storedJsonReadBook = localStorage.getItem('read-books');
     const storedReadBooks = JSON.parse(storedJsonReadBook)
-    console.log('read', storedReadBooks);
+    // console.log('read', storedReadBooks);
     // console.log(storedJsonReadBook);
 
     const storedJsonWishlistBook = localStorage.getItem('wishlist-books');
     const storedWishlistBooks = JSON.parse(storedJsonWishlistBook)
-    console.log('this is wishlist', storedWishlistBooks);
+    // console.log('this is wishlist', storedWishlistBooks);
     // console.log(storedJsonWishlistBook);
     fetch('../books.json')
       .then(res => res.json())
@@ -48,8 +48,8 @@ const ListedBooks = () => {
 
     setWishlists(staticWishlistBooks);
   }, [books]);
-  console.log(readBooks);
-  console.log(wishlists);
+  // console.log(readBooks);
+  // console.log(wishlists);
   // console.log(books)
 
 
