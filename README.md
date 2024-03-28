@@ -2,7 +2,7 @@
 
 
 Website Name : Book Review
-[Live Site link]()
+[Live Site link](https://lucky-speculoos-49ef5d.netlify.app/)
 1. Responsive design
 2. Navigation
 3. Book Listing and Details
