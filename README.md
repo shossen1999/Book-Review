@@ -12,5 +12,5 @@ Currently, two official plugins are available:
 >>>>>>> 23c76ec316f73528b81179e78e5d46c7799eb707
 
 -[Live Site link]()
--Responsive design
--Navigation
+1. Responsive design
+2. Navigation
