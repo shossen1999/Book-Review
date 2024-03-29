@@ -8,10 +8,10 @@ const Book = ({ book }) => {
   
 
     return (
-        <div>
+        <div className='block'>
 
             <Link to={`/book/${bookId}`}>
-            <div className="card border-[#282828] border-opacity-[20%] rounded-[16px] font-workSans border-2 p-4 md:p-8 md:w-96 bg-base-100 shadow-xl">
+            <div className="card border-[#282828] border-opacity-[20%]  rounded-[16px] font-workSans border-2 p-4 lg:p-8 lg:w-96 bg-base-100 shadow-xl">
                 <figure className=" rounded-[16px] p-6 bg-[#F3F3F3]"><img src={image} alt="books" /></figure>
                 <div className="card-body">
                     <div className="flex justify-between ">
