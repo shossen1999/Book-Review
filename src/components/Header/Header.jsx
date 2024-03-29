@@ -32,6 +32,16 @@ const Header = () => {
                                 isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
                             }
                             to="/pages">Pages to Read</NavLink></li>
+                        <li><NavLink
+                            className={({ isActive }) =>
+                                isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                            }
+                            to="/favorite">Favorite Books</NavLink></li>
+                        <li><NavLink
+                            className={({ isActive }) =>
+                                isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                            }
+                            to="/contact">Contact Us</NavLink></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-3xl font-bold">Book Vibe</a>
@@ -53,6 +63,17 @@ const Header = () => {
                             isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
                         }
                         to="/pages">Pages to Read</NavLink></li>
+
+                    <li><NavLink
+                        className={({ isActive }) =>
+                            isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                        }
+                        to="/favorite">Favorite Books</NavLink></li>
+                    <li><NavLink
+                        className={({ isActive }) =>
+                            isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                        }
+                        to="/contact">Contact Us</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end flex gap-4">

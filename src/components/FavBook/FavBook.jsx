@@ -1,16 +1,22 @@
-
 import { GrLocation } from "react-icons/gr";
-import publisherImg from '../../assets/images/Vector.png'
-import pageImg from '../../assets/images/Vector (1).png'
-import PropTypes from 'prop-types'
+import publisherImg from '../../assets/images/Vector.png';
+import pageImg from '../../assets/images/Vector (1).png';
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+const FavBook = ({ readBook }) => {
+    if (!readBook) {
+        return (
+            <div className="text-center font-extrabold text-red-700 text-5xl p-8">
+                <p>No Books Added Yet</p>
+            </div>
+        );
+    }
 
-const Readbooks = ({ readbook }) => {
-    const { bookId, publisher, totalPages, yearOfPublishing, image, tags, bookName, author, category, rating } = readbook;
+    const { bookId, publisher, totalPages, yearOfPublishing, image, tags, bookName, author, category, rating } = readBook;
 
     return (
-        <div className="card font-workSans flex flex-col lg:flex-row card-side lg:m-0 m-4 bg-base-100 shadow-xl p-8 border-[#282828] border-opacity-[20%] rounded-[16px] border-2">
-            <div className="lg:w-[20%] bg-[#F3F3F3] rounded-[16px]">
+        <div className="card font-workSans flex flex-col card-side lg:m-0 m-4 bg-base-100 shadow-xl p-8 border-[#282828] border-opacity-[20%] rounded-[16px] border-2">
+            <div className=" bg-[#F3F3F3] rounded-[16px]">
                 <img src={image} className="h-full flex  justify-center items-center  mx-auto p-4" alt="" />
             </div>
             <div className="card-body flex flex-col space-y-2">
@@ -20,7 +26,7 @@ const Readbooks = ({ readbook }) => {
                 <div className="flex items-center lg:gap-4 gap-1">
                     <div className=" lg:w-[80px]"><p className="text-black font-bold">Tag</p></div>
                     <div className="flex lg:gap-3 gap-1 ">
-                        {tags.map((tag, index) => (
+                        {tags?.map((tag, index) => (
                             <p className="lg:px-4 px-6 py-1 rounded-[24px] bg-[#17BE0A12]  text-[#23BE0A]" key={index}> #{tag}</p>
                         ))}
                     </div>
@@ -54,9 +60,7 @@ const Readbooks = ({ readbook }) => {
         </div>
     );
 };
-
-Readbooks.propTypes = {
-    readbook: PropTypes.object
+FavBook.propTypes={
+    readBook:PropTypes.object
 }
-
-export default Readbooks;
+export default FavBook;

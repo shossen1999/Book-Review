@@ -9,31 +9,35 @@ const PagesRead = () => {
   const [books, setBooks] = useState([]);
   const [readBooks, setReadBooks] = useState([]);
   useEffect(() => {
-    const storedJsonReadBook = localStorage.getItem('read-books');
-    const storedReadBooks = JSON.parse(storedJsonReadBook)
-    console.log('read', storedReadBooks);
-    // console.log(storedJsonReadBook);
-
-
-    // console.log(storedJsonWishlistBook);
-    fetch('/books.json')
-      .then(res => res.json())
-      .then(data => setBooks(data));
-
-    const staticReadBooks = [];
-    for (const book of books) {
-      for (const storedReadBook of storedReadBooks) {
-        if (book.bookId === parseInt(storedReadBook)) {
-          staticReadBooks.push(book)
+    if(localStorage.getItem('read-books')){
+      const storedJsonReadBook = localStorage.getItem('read-books');
+      const storedReadBooks = JSON.parse(storedJsonReadBook)
+      // console.log('read', storedReadBooks);
+      // console.log(storedJsonReadBook);
+  
+  
+      // console.log(storedJsonWishlistBook);
+      fetch('/books.json')
+        .then(res => res.json())
+        .then(data => setBooks(data));
+  
+      const staticReadBooks = [];
+      for (const book of books) {
+        for (const storedReadBook of storedReadBooks) {
+          if (book.bookId === parseInt(storedReadBook)) {
+            staticReadBooks.push(book)
+          }
         }
       }
+  
+      setReadBooks(staticReadBooks);
+
     }
-
-    setReadBooks(staticReadBooks);
+   
   }, [books]);
-  console.log(readBooks);
+  // console.log(readBooks);
 
-  console.log(books);
+  // console.log(books);
 
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
